@@ -17,6 +17,31 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": []
+		"schema": [
+			{
+				"name": "time",
+				"type": "String"
+			},
+			{
+				"name": "latitud",
+				"type": "String"
+			},
+			{
+				"name": "longitud",
+				"type": "String"
+			},
+			{
+				"name": "Ts_Valor",
+				"type": "String"
+			},
+			{
+				"name": "CodigoNacional",
+				"type": "String"
+			},
+			{
+				"name": "nombreEstacion",
+				"type": "String"
+			}
+		]
 	}
 }
