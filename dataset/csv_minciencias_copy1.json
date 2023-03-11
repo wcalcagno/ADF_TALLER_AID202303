@@ -5,13 +5,18 @@
 			"referenceName": "WSGH_MinCiencias",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"periodo": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
 				"relativeUrl": {
-					"value": "@concat(\n 'Datos-CambioClimatico/main/output/temperatura_dmc/1950/1950_temperatura_dmc.csv'   \n)\n",
+					"value": "@concat(\n 'Datos-CambioClimatico/main/output/temperatura_dmc/',\n '' ,\n '/',\n '',\n '_temperatura_dmc.csv'   \n)\n",
 					"type": "Expression"
 				}
 			},
