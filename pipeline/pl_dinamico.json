@@ -60,7 +60,13 @@
 							"inputs": [
 								{
 									"referenceName": "csv_minciencias_dinamico",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"parametro": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
