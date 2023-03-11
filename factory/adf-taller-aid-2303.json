@@ -1,0 +1,9 @@
+{
+	"name": "adf-taller-aid-2303",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c53dab2a-cffb-42f0-819e-d6d086ff2aa2",
+		"tenantId": "54c99288-570f-4357-8ec5-86bd173a4960"
+	}
+}
