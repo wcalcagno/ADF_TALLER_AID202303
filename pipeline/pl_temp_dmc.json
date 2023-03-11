@@ -255,7 +255,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "csv_minciencias_copy1",
+						"referenceName": "ds_csv_mciencia_dinamico",
 						"type": "DatasetReference"
 					}
 				],
