@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "pl_dinamico",
 	"properties": {
 		"activities": [
 			{
@@ -26,6 +26,16 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"source": {
+									"type": "DelimitedTextSource",
+									"storeSettings": {
+										"type": "HttpReadSettings",
+										"requestMethod": "GET"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextReadSettings"
+									}
+								},
 								"sink": {
 									"type": "DelimitedTextSink",
 									"storeSettings": {
@@ -37,8 +47,22 @@
 										"fileExtension": ".csv"
 									}
 								},
-								"enableStaging": false
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
 							},
+							"inputs": [
+								{
+									"referenceName": "csv_minciencias_dinamico",
+									"type": "DatasetReference"
+								}
+							],
 							"outputs": [
 								{
 									"referenceName": "ds_adls_tempoutput",
