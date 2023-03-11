@@ -1,0 +1,19 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"parameters": {
+			"periodos_varios": {
+				"type": "array",
+				"defaultValue": [
+					"1950",
+					"1960",
+					"1970",
+					"1980",
+					"1990",
+					"2000"
+				]
+			}
+		},
+		"annotations": []
+	}
+}
