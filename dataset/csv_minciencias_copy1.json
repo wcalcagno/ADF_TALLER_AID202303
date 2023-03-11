@@ -1,0 +1,50 @@
+{
+	"name": "csv_minciencias_copy1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "WSGH_MinCiencias",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@concat(\n 'Datos-CambioClimatico/main/output/temperatura_dmc/1950/1950_temperatura_dmc.csv'   \n)\n",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "time",
+				"type": "String"
+			},
+			{
+				"name": "latitud",
+				"type": "String"
+			},
+			{
+				"name": "longitud",
+				"type": "String"
+			},
+			{
+				"name": "Ts_Valor",
+				"type": "String"
+			},
+			{
+				"name": "CodigoNacional",
+				"type": "String"
+			},
+			{
+				"name": "nombreEstacion",
+				"type": "String"
+			}
+		]
+	}
+}
