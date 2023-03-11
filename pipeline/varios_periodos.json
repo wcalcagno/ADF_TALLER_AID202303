@@ -8,6 +8,10 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.años",
+						"type": "Expression"
+					},
 					"activities": [
 						{
 							"name": "Copy data1",
