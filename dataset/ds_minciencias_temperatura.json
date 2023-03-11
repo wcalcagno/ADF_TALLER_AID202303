@@ -1,0 +1,22 @@
+{
+	"name": "ds_minciencias_temperatura",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "csv_minciencias",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "Datos-CambioClimatico/main/output/temperatura_dmc/1950/1950_temperatura_dmc.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
