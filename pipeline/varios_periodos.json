@@ -8,10 +8,6 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
-					"items": {
-						"value": "{'1970','1971','1972','1973'}",
-						"type": "Expression"
-					},
 					"activities": [
 						{
 							"name": "Copy data1",
@@ -80,6 +76,17 @@
 				}
 			}
 		],
+		"parameters": {
+			"años": {
+				"type": "array",
+				"defaultValue": [
+					"1970",
+					"1971",
+					"1972",
+					"1973"
+				]
+			}
+		},
 		"annotations": []
 	}
 }
