@@ -1,0 +1,12 @@
+{
+	"name": "GitHub_MCiencias",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "GitHub",
+		"typeProperties": {
+			"username": "gilyeni",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDY3QzM1NUNCLUZBRDEtNEQ2My05OTc0LTdFQjQ4OTMxM0ZDMV85NjM2MzhmMS0yYjM3LTRmNTktYmE0Ni0xMWZlZDg3ODVjN2EiDQp9"
+		}
+	}
+}
