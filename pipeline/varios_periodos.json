@@ -9,7 +9,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "{1970,1971,1972,1973}",
+						"value": "{'1970','1971','1972','1973'}",
 						"type": "Expression"
 					},
 					"activities": [
@@ -59,8 +59,14 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "csv_minciencias_copy1",
-									"type": "DatasetReference"
+									"referenceName": "ds_csv_mciencia_dinamico",
+									"type": "DatasetReference",
+									"parameters": {
+										"periodo": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
