@@ -10,7 +10,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": "Datos-CambioClimatico/main/output/temperatura_dmc/1962/1962_temperatura_dmc.csv"
+				"relativeUrl": {
+					"value": "@concat(\n    'Datos-CambioClimatico/main/output/temperatura_dmc/1962/1962_temperatura_dmc.csv'\n)",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
