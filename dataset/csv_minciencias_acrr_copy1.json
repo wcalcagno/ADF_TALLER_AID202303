@@ -1,0 +1,47 @@
+{
+	"name": "csv_minciencias_acrr_copy1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "WSGH_MinCiencias_Acrr",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "Datos-CambioClimatico/main/output/temperatura_dmc/1962/1962_temperatura_dmc.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "time",
+				"type": "String"
+			},
+			{
+				"name": "latitud",
+				"type": "String"
+			},
+			{
+				"name": "longitud",
+				"type": "String"
+			},
+			{
+				"name": "Ts_Valor",
+				"type": "String"
+			},
+			{
+				"name": "CodigoNacional",
+				"type": "String"
+			},
+			{
+				"name": "nombreEstacion",
+				"type": "String"
+			}
+		]
+	}
+}
