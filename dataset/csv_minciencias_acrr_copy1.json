@@ -5,13 +5,18 @@
 			"referenceName": "WSGH_MinCiencias_Acrr",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"periodo": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
 				"relativeUrl": {
-					"value": "@concat(\n    'Datos-CambioClimatico/main/output/temperatura_dmc/1962/1962_temperatura_dmc.csv'\n)",
+					"value": "@concat(\n    'Datos-CambioClimatico/main/output/temperatura_dmc/',\n    1962,\n    '/',\n    1962,\n    '_temperatura_dmc.csv'\n)",
 					"type": "Expression"
 				}
 			},
