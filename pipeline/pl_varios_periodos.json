@@ -9,7 +9,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@pipeline().parameters.p_periodos_extraer",
+						"value": "@pipeline().parameters.años",
 						"type": "Expression"
 					},
 					"activities": [
