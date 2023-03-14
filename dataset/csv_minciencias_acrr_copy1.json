@@ -16,7 +16,7 @@
 			"location": {
 				"type": "HttpServerLocation",
 				"relativeUrl": {
-					"value": "@concat(\n    'Datos-CambioClimatico/main/output/temperatura_dmc/',\n    1962,\n    '/',\n    1962,\n    '_temperatura_dmc.csv'\n)",
+					"value": "@concat(\n    'Datos-CambioClimatico/main/output/temperatura_dmc/'\n    ,dataset().periodo\n    ,'/'\n    ,dataset().periodo\n    ,'_temperatura_dmc.csv'\n)",
 					"type": "Expression"
 				}
 			},
