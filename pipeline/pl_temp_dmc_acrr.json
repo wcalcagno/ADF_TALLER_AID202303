@@ -255,7 +255,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "csv_minciencias_acrr_copy1",
+						"referenceName": "ds_csv_minciencias_dinamico_acrr",
 						"type": "DatasetReference"
 					}
 				],
