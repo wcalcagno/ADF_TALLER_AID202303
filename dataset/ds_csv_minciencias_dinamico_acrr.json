@@ -1,5 +1,5 @@
 {
-	"name": "csv_minciencias_acrr_copy1",
+	"name": "ds_csv_minciencias_dinamico_acrr",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "WSGH_MinCiencias_Acrr",
