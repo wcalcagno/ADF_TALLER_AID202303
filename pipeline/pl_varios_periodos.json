@@ -8,10 +8,6 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
-					"items": {
-						"value": "{1970,1971,1972,1973}",
-						"type": "Expression"
-					},
 					"activities": [
 						{
 							"name": "Copy data1",
@@ -59,8 +55,14 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "csv_minciencias_acrr_copy1",
-									"type": "DatasetReference"
+									"referenceName": "ds_csv_minciencias_dinamico_acrr",
+									"type": "DatasetReference",
+									"parameters": {
+										"periodo": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
@@ -74,6 +76,17 @@
 				}
 			}
 		],
+		"parameters": {
+			"p_periodos_extraer": {
+				"type": "array",
+				"defaultValue": [
+					"1970",
+					"1971",
+					"1972",
+					"1973"
+				]
+			}
+		},
 		"annotations": []
 	}
 }
