@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "ForEach vienti",
+				"name": "ForEach viento",
 				"type": "ForEach",
 				"dependsOn": [],
 				"userProperties": [],
