@@ -14,7 +14,7 @@
 					},
 					"activities": [
 						{
-							"name": "Copy data1",
+							"name": "Copy data temperatura",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
