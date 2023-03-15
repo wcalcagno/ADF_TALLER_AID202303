@@ -60,7 +60,10 @@
 							"inputs": [
 								{
 									"referenceName": "ds_csv_mciencia_dinamico_humedad",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"periodo": "@item()"
+									}
 								}
 							],
 							"outputs": [
