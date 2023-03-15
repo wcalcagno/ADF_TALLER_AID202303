@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "ForEach1",
+				"name": "ForEach temperatura",
 				"type": "ForEach",
 				"dependsOn": [],
 				"userProperties": [],
