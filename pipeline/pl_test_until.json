@@ -1,0 +1,244 @@
+{
+	"name": "pl_test_until",
+	"properties": {
+		"activities": [
+			{
+				"name": "Until1",
+				"type": "Until",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@bool(variables('isMaxPeriod'))",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Copy data1",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "DelimitedTextSource",
+									"storeSettings": {
+										"type": "HttpReadSettings",
+										"requestMethod": "GET"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextReadSettings"
+									}
+								},
+								"sink": {
+									"type": "DelimitedTextSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".csv"
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"mappings": [
+										{
+											"source": {
+												"name": "time",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"name": "time",
+												"type": "String",
+												"physicalType": "String"
+											}
+										},
+										{
+											"source": {
+												"name": "latitud",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"name": "latitud",
+												"type": "String",
+												"physicalType": "String"
+											}
+										},
+										{
+											"source": {
+												"name": "longitud",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"name": "longitud",
+												"type": "String",
+												"physicalType": "String"
+											}
+										},
+										{
+											"source": {
+												"name": "Ts_Valor",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"name": "Ts_Valor",
+												"type": "String",
+												"physicalType": "String"
+											}
+										},
+										{
+											"source": {
+												"name": "CodigoNacional",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"name": "CodigoNacional",
+												"type": "String",
+												"physicalType": "String"
+											}
+										},
+										{
+											"source": {
+												"name": "nombreEstacion",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"name": "nombreEstacion",
+												"type": "String",
+												"physicalType": "String"
+											}
+										}
+									],
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "ds_csv_minciencias_dinamico_acrr",
+									"type": "DatasetReference",
+									"parameters": {
+										"periodo": {
+											"value": "@variables('VarPeriod')",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "ds_adls_csvtemperatura_acrr",
+									"type": "DatasetReference"
+								}
+							]
+						},
+						{
+							"name": "If Condition1",
+							"type": "IfCondition",
+							"dependsOn": [
+								{
+									"activity": "Copy data1",
+									"dependencyConditions": [
+										"Completed"
+									]
+								}
+							],
+							"userProperties": [],
+							"typeProperties": {
+								"expression": {
+									"value": "@equals(variables('VarPeriod'),variables('MaxPeriod'))",
+									"type": "Expression"
+								},
+								"ifFalseActivities": [
+									{
+										"name": "Set VarPeriod",
+										"type": "SetVariable",
+										"dependsOn": [],
+										"userProperties": [],
+										"typeProperties": {
+											"variableName": "VarPeriod",
+											"value": {
+												"value": "@string(add(int(variables('MinPeriod')),1))",
+												"type": "Expression"
+											}
+										}
+									}
+								],
+								"ifTrueActivities": [
+									{
+										"name": "Set isMaxPeriod",
+										"type": "SetVariable",
+										"dependsOn": [],
+										"userProperties": [],
+										"typeProperties": {
+											"variableName": "isMaxPeriod",
+											"value": "true"
+										}
+									}
+								]
+							}
+						},
+						{
+							"name": "Set MinPeriod",
+							"type": "SetVariable",
+							"dependsOn": [
+								{
+									"activity": "If Condition1",
+									"dependencyConditions": [
+										"Completed"
+									]
+								}
+							],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "MinPeriod",
+								"value": {
+									"value": "@variables('VarPeriod')",
+									"type": "Expression"
+								}
+							}
+						}
+					],
+					"timeout": "0.12:00:00"
+				}
+			}
+		],
+		"variables": {
+			"isMaxPeriod": {
+				"type": "String",
+				"defaultValue": "false"
+			},
+			"VarPeriod": {
+				"type": "String",
+				"defaultValue": "1976"
+			},
+			"MaxPeriod": {
+				"type": "String",
+				"defaultValue": "1983"
+			},
+			"MinPeriod": {
+				"type": "String",
+				"defaultValue": "1976"
+			}
+		},
+		"annotations": []
+	}
+}
