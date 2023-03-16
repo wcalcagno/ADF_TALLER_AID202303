@@ -217,7 +217,7 @@
 							}
 						}
 					],
-					"timeout": "0.00:02:00"
+					"timeout": "0.00:05:00"
 				}
 			}
 		],
@@ -228,15 +228,15 @@
 			},
 			"VarPeriod": {
 				"type": "String",
-				"defaultValue": "1976"
+				"defaultValue": "2000"
 			},
 			"MaxPeriod": {
 				"type": "String",
-				"defaultValue": "1983"
+				"defaultValue": "2002"
 			},
 			"MinPeriod": {
 				"type": "String",
-				"defaultValue": "1976"
+				"defaultValue": "2000"
 			}
 		},
 		"annotations": []
