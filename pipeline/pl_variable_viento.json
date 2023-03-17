@@ -50,6 +50,104 @@
 								"enableStaging": false,
 								"translator": {
 									"type": "TabularTranslator",
+									"mappings": [
+										{
+											"source": {
+												"name": "time",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"name": "time",
+												"type": "String",
+												"physicalType": "String"
+											}
+										},
+										{
+											"source": {
+												"name": "latitud",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"name": "latitud",
+												"type": "String",
+												"physicalType": "String"
+											}
+										},
+										{
+											"source": {
+												"name": "longitud",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"name": "longitud",
+												"type": "String",
+												"physicalType": "String"
+											}
+										},
+										{
+											"source": {
+												"name": "dd_Valor",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"name": "dd_Valor",
+												"type": "String",
+												"physicalType": "String"
+											}
+										},
+										{
+											"source": {
+												"name": "ff_Valor",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"name": "ff_Valor",
+												"type": "String",
+												"physicalType": "String"
+											}
+										},
+										{
+											"source": {
+												"name": "VRB_Valor",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"name": "VRB_Valor",
+												"type": "String",
+												"physicalType": "String"
+											}
+										},
+										{
+											"source": {
+												"name": "CodigoNacional",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"name": "CodigoNacional",
+												"type": "String",
+												"physicalType": "String"
+											}
+										},
+										{
+											"source": {
+												"name": "nombreEstacion",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"name": "nombreEstacion",
+												"type": "String",
+												"physicalType": "String"
+											}
+										}
+									],
 									"typeConversion": true,
 									"typeConversionSettings": {
 										"allowDataTruncation": true,
@@ -59,7 +157,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "ds_csv_minciencias_dinamico_acrr",
+									"referenceName": "ds_csv_minciencias_viento_acrr",
 									"type": "DatasetReference",
 									"parameters": {
 										"periodo": {
@@ -71,7 +169,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_adls_csvtemperatura_acrr",
+									"referenceName": "ds_adls_csv_viento_acrr",
 									"type": "DatasetReference"
 								}
 							]
