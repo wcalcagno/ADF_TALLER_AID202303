@@ -1,0 +1,25 @@
+{
+	"name": "db_minciencias",
+	"properties": {
+		"Name": "db_minciencias",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://bronze@adlsyenirethgil.dfs.core.windows.net/Datos-CambioClimatico",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "yenireth-gil-synapse-WorkspaceDefaultStorage"
+			}
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "aae96231-079a-40db-924c-de68b141232a"
+	},
+	"type": "DATABASE"
+}
