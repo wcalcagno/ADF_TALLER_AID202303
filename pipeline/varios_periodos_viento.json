@@ -60,7 +60,13 @@
 							"inputs": [
 								{
 									"referenceName": "ds_csv_minciencias_viento_dinamico",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"periodo": {
+											"value": "@pipeline().parameters.años",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
