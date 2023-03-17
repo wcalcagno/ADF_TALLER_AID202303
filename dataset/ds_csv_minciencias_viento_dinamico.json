@@ -1,0 +1,55 @@
+{
+	"name": "ds_csv_minciencias_viento_dinamico",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "csv_minciencias",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"periodo": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@concat(\n'Datos-CambioClimatico/main/output/viento_dmc/'\n,dataset().periodo\n,'/'\n,dataset().periodo\n,'_viento_dmc.csv'\n)",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "time",
+				"type": "String"
+			},
+			{
+				"name": "latitud",
+				"type": "String"
+			},
+			{
+				"name": "longitud",
+				"type": "String"
+			},
+			{
+				"name": "Ts_Valor",
+				"type": "String"
+			},
+			{
+				"name": "CodigoNacional",
+				"type": "String"
+			},
+			{
+				"name": "nombreEstacion",
+				"type": "String"
+			}
+		]
+	}
+}
