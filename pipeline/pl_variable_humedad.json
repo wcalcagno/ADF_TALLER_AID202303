@@ -89,36 +89,12 @@
 										},
 										{
 											"source": {
-												"name": "dd_Valor",
+												"name": "HR_Valor",
 												"type": "String",
 												"physicalType": "String"
 											},
 											"sink": {
-												"name": "dd_Valor",
-												"type": "String",
-												"physicalType": "String"
-											}
-										},
-										{
-											"source": {
-												"name": "ff_Valor",
-												"type": "String",
-												"physicalType": "String"
-											},
-											"sink": {
-												"name": "ff_Valor",
-												"type": "String",
-												"physicalType": "String"
-											}
-										},
-										{
-											"source": {
-												"name": "VRB_Valor",
-												"type": "String",
-												"physicalType": "String"
-											},
-											"sink": {
-												"name": "VRB_Valor",
+												"name": "HR_Valor",
 												"type": "String",
 												"physicalType": "String"
 											}
@@ -169,7 +145,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_adls_csv_viento_acrr",
+									"referenceName": "ds_adls_csv_humedad_acrr",
 									"type": "DatasetReference"
 								}
 							]
