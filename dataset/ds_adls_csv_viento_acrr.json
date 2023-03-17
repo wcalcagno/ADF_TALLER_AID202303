@@ -1,5 +1,5 @@
 {
-	"name": "ds_adls_csvviento_acrr",
+	"name": "ds_adls_csv_viento_acrr",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ADLS_Angye",
