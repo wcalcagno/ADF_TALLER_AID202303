@@ -63,7 +63,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"periodo": {
-											"value": "@pipeline().parameters.años",
+											"value": "@item()",
 											"type": "Expression"
 										}
 									}
