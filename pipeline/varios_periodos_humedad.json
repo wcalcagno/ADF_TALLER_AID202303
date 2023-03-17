@@ -71,7 +71,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_adls_minciencias_temperatura",
+									"referenceName": "ds_adls_minciencias_humedad",
 									"type": "DatasetReference"
 								}
 							]
