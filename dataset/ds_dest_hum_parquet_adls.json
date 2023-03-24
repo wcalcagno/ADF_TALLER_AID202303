@@ -1,0 +1,23 @@
+{
+	"name": "ds_dest_hum_parquet_adls",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS_Walter",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Parquetizando"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "temperatura",
+				"fileSystem": "gold"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
