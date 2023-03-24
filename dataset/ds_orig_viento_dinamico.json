@@ -16,7 +16,7 @@
 			"location": {
 				"type": "HttpServerLocation",
 				"relativeUrl": {
-					"value": "@concat(\n'Datos-CambioClimatico/main/output/humedad_dmc/',\ndataset().year,\n'/',\ndataset().year,'_temperatura_dmc.csv'\n)",
+					"value": "@concat(\n'Datos-CambioClimatico/main/output/viento_dmc/',\ndataset().year,\n'/',\ndataset().year,'_temperatura_dmc.csv'\n)",
 					"type": "Expression"
 				}
 			},
