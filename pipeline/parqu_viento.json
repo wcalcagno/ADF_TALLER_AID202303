@@ -163,12 +163,18 @@
 				"name": "ForEach1",
 				"type": "ForEach",
 				"dependsOn": [],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.year",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
 			"year": {
-				"type": "string"
+				"type": "array"
 			}
 		},
 		"folder": {
