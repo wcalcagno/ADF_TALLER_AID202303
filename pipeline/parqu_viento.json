@@ -28,6 +28,15 @@
 							"typeProperties": {
 								"source": {
 									"type": "DelimitedTextSource",
+									"additionalColumns": [
+										{
+											"name": "anno",
+											"value": {
+												"value": "@item()",
+												"type": "Expression"
+											}
+										}
+									],
 									"storeSettings": {
 										"type": "AzureBlobFSReadSettings",
 										"recursive": true,
@@ -39,7 +48,7 @@
 											"value": "@concat(\n    item(),'_viento_dmc.txt'\n)",
 											"type": "Expression"
 										},
-										"enablePartitionDiscovery": false
+										"enablePartitionDiscovery": true
 									},
 									"formatSettings": {
 										"type": "DelimitedTextReadSettings"
@@ -151,6 +160,17 @@
 											},
 											"sink": {
 												"name": "nombreEstacion",
+												"type": "String",
+												"physicalType": "UTF8"
+											}
+										},
+										{
+											"source": {
+												"name": "anno",
+												"type": "String"
+											},
+											"sink": {
+												"name": "anno",
 												"type": "String",
 												"physicalType": "UTF8"
 											}
