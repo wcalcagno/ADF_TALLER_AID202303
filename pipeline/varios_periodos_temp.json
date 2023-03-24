@@ -44,7 +44,7 @@
 									"formatSettings": {
 										"type": "DelimitedTextWriteSettings",
 										"quoteAllText": true,
-										"fileExtension": ".csv"
+										"fileExtension": ".txt"
 									}
 								},
 								"enableStaging": false,
@@ -59,11 +59,11 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "ds_csv_mciencia_dinamico",
+									"referenceName": "ds_orig_temp_dinamico",
 									"type": "DatasetReference",
 									"parameters": {
-										"periodo": {
-											"value": "@item()",
+										"year": {
+											"value": "@pipeline().parameters.periodos_varios",
 											"type": "Expression"
 										}
 									}
@@ -71,7 +71,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_adls_csvtemperatura",
+									"referenceName": "ds_adls_tempoutput",
 									"type": "DatasetReference"
 								}
 							]
