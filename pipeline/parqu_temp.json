@@ -134,8 +134,19 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": []
 			}
 		],
+		"parameters": {
+			"year": {
+				"type": "array"
+			}
+		},
 		"folder": {
 			"name": "Parquetizando"
 		},
