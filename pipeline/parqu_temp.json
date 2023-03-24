@@ -20,8 +20,8 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "Datos-CambioClimatico/main/output/humedad_dmc/1950",
-							"wildcardFileName": "1950_humedad_dmc.txt",
+							"wildcardFolderPath": "Datos-CambioClimatico/main/output/temperatura_dmc/1950",
+							"wildcardFileName": "1950_temperatura_dmc.txt",
 							"enablePartitionDiscovery": true
 						},
 						"formatSettings": {
@@ -80,12 +80,12 @@
 							},
 							{
 								"source": {
-									"name": "HR_Valor",
+									"name": "Ts_Valor",
 									"type": "Double",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "HR_Valor",
+									"name": "Ts_Valor",
 									"type": "String",
 									"physicalType": "UTF8"
 								}
