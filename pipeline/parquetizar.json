@@ -19,7 +19,9 @@
 						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
-							"fileListPath": "bronze/Datos-CambioClimatico/main/output/humedad_dmc",
+							"recursive": true,
+							"wildcardFolderPath": "Datos-CambioClimatico/main/output/humedad_dmc/1950",
+							"wildcardFileName": "1950_humedad_dmc.txt",
 							"enablePartitionDiscovery": true
 						},
 						"formatSettings": {
