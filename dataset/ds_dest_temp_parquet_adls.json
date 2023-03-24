@@ -13,6 +13,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "temp.snappy.parquet",
 				"folderPath": "temperatura",
 				"fileSystem": "gold"
 			},
