@@ -55,7 +55,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "parquet_adls",
+						"referenceName": "ds_dest_temp_parquet_adls",
 						"type": "DatasetReference"
 					}
 				]
