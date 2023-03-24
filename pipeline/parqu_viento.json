@@ -71,7 +71,7 @@
 										{
 											"source": {
 												"name": "time",
-												"type": "String",
+												"type": "DateTime",
 												"physicalType": "String"
 											},
 											"sink": {
@@ -83,7 +83,7 @@
 										{
 											"source": {
 												"name": "latitud",
-												"type": "String",
+												"type": "Double",
 												"physicalType": "String"
 											},
 											"sink": {
@@ -95,7 +95,7 @@
 										{
 											"source": {
 												"name": "longitud",
-												"type": "String",
+												"type": "Double",
 												"physicalType": "String"
 											},
 											"sink": {
@@ -107,7 +107,7 @@
 										{
 											"source": {
 												"name": "dd_Valor",
-												"type": "String",
+												"type": "Double",
 												"physicalType": "String"
 											},
 											"sink": {
@@ -119,7 +119,7 @@
 										{
 											"source": {
 												"name": "ff_Valor",
-												"type": "String",
+												"type": "Double",
 												"physicalType": "String"
 											},
 											"sink": {
@@ -131,7 +131,7 @@
 										{
 											"source": {
 												"name": "VRB_Valor",
-												"type": "String",
+												"type": "Double",
 												"physicalType": "String"
 											},
 											"sink": {
