@@ -1,12 +1,12 @@
 {
-	"name": "ds_csv_mciencia_dinamico",
+	"name": "ds_orig_viento_dinamico",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "WSGH_MinCiencias",
+			"referenceName": "GitHub_MinCiencias",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"periodo": {
+			"year": {
 				"type": "string"
 			}
 		},
@@ -16,7 +16,7 @@
 			"location": {
 				"type": "HttpServerLocation",
 				"relativeUrl": {
-					"value": "@concat(\n'Datos-CambioClimatico/main/output/temperatura_dmc/'\n,dataset().periodo\n,'/'\n,dataset().periodo\n,'_temperatura_dmc.csv'\n)",
+					"value": "@concat(\n'Datos-CambioClimatico/main/output/viento_dmc/',\ndataset().year,\n'/',\ndataset().year,'_viento_dmc.csv'\n)",
 					"type": "Expression"
 				}
 			},
@@ -39,7 +39,15 @@
 				"type": "String"
 			},
 			{
-				"name": "Ts_Valor",
+				"name": "dd_Valor",
+				"type": "String"
+			},
+			{
+				"name": "ff_Valor",
+				"type": "String"
+			},
+			{
+				"name": "VRB_Valor",
 				"type": "String"
 			},
 			{

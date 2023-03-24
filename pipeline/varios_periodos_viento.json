@@ -1,5 +1,5 @@
 {
-	"name": "varios_periodos_temp",
+	"name": "varios_periodos_viento",
 	"properties": {
 		"activities": [
 			{
@@ -89,12 +89,36 @@
 										},
 										{
 											"source": {
-												"name": "Ts_Valor",
+												"name": "dd_Valor",
 												"type": "String",
 												"physicalType": "String"
 											},
 											"sink": {
-												"name": "Ts_Valor",
+												"name": "dd_Valor",
+												"type": "String",
+												"physicalType": "String"
+											}
+										},
+										{
+											"source": {
+												"name": "ff_Valor",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"name": "ff_Valor",
+												"type": "String",
+												"physicalType": "String"
+											}
+										},
+										{
+											"source": {
+												"name": "VRB_Valor",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"name": "VRB_Valor",
 												"type": "String",
 												"physicalType": "String"
 											}
@@ -133,7 +157,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "ds_orig_temp_dinamico",
+									"referenceName": "ds_orig_viento_dinamico",
 									"type": "DatasetReference",
 									"parameters": {
 										"year": {

@@ -1,20 +1,24 @@
 {
-	"name": "csv_minciencias",
+	"name": "ds_orig_hum_dinamico",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "WSGH_MinCiencias",
+			"referenceName": "GitHub_MinCiencias",
 			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"year": {
+				"type": "string"
+			}
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-wcl_desarrollo
-				"relativeUrl": "Datos-CambioClimatico/main/output/temperatura_dmc/1950/1950_temperatura_dmc.csv"
-
-				"relativeUrl": "Datos-CambioClimatico/main/output/temperatura_dmc/2000/2000_temperatura_dmc.csv"
- main
+				"relativeUrl": {
+					"value": "@concat(\n'Datos-CambioClimatico/main/output/humedad_dmc/',\ndataset().year,\n'/',\ndataset().year,'_humedad_dmc.csv'\n)",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
@@ -35,7 +39,7 @@ wcl_desarrollo
 				"type": "String"
 			},
 			{
-				"name": "Ts_Valor",
+				"name": "HR_Valor",
 				"type": "String"
 			},
 			{

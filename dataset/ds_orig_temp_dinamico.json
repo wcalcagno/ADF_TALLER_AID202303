@@ -1,12 +1,12 @@
 {
-	"name": "csv_minciencias_dinamico",
+	"name": "ds_orig_temp_dinamico",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "WSGH_MinCiencias",
+			"referenceName": "GitHub_MinCiencias",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"parametro": {
+			"year": {
 				"type": "string"
 			}
 		},
@@ -16,7 +16,7 @@
 			"location": {
 				"type": "HttpServerLocation",
 				"relativeUrl": {
-					"value": "@concat(\n    'Datos-CambioClimatico/main/output/temperatura_dmc/',\n    dataset().parametro,\n    '/',\n    dataset().parametro,'_temperatura_dmc.csv')",
+					"value": "@concat(\n'Datos-CambioClimatico/main/output/temperatura_dmc/',\ndataset().year,\n'/',\ndataset().year,'_temperatura_dmc.csv'\n)",
 					"type": "Expression"
 				}
 			},
