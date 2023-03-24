@@ -18,7 +18,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "temp.snappy.parquet",
+				"fileName": {
+					"value": "@concat(\n    dataset().year,\n    '.temp.snappy.parquet'\n)",
+					"type": "Expression"
+				},
 				"folderPath": "temperatura",
 				"fileSystem": "gold"
 			},
