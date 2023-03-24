@@ -130,7 +130,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_dest_hum_parquet_adls",
+						"referenceName": "ds_dest_temp_parquet_adls",
 						"type": "DatasetReference"
 					}
 				]
