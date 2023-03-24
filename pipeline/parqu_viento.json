@@ -22,7 +22,8 @@
 							"recursive": true,
 							"wildcardFolderPath": "Datos-CambioClimatico/main/output/viento_dmc/1950/",
 							"wildcardFileName": "1950_viento_dmc.txt",
-							"enablePartitionDiscovery": true
+							"enablePartitionDiscovery": true,
+							"partitionRootPath": "bronze/Datos-CambioClimatico/main/output/humedad_dmc"
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings"
