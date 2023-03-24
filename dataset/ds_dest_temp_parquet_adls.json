@@ -1,5 +1,5 @@
 {
-	"name": "parquet_adls",
+	"name": "ds_dest_temp_parquet_adls",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ADLS_Walter",
