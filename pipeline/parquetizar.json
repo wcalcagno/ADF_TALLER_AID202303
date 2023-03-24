@@ -20,8 +20,9 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"wildcardFileName": "*",
-							"enablePartitionDiscovery": false
+							"wildcardFolderPath": "Datos-CambioClimatico/main/output/humedad_dmc/1950",
+							"wildcardFileName": "1950_humedad_dmc.txt",
+							"enablePartitionDiscovery": true
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings"
@@ -40,6 +41,80 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "time",
+									"type": "DateTime",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "time",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "latitud",
+									"type": "Double",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "latitud",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "longitud",
+									"type": "Double",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "longitud",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "HR_Valor",
+									"type": "Double",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "HR_Valor",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CodigoNacional",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CodigoNacional",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "nombreEstacion",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "nombreEstacion",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
@@ -49,13 +124,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_dest_adls_csv",
+						"referenceName": "ds_origen_adls_csv",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_dest_temp_parquet_adls",
+						"referenceName": "ds_dest_hum_parquet_adls",
 						"type": "DatasetReference"
 					}
 				]
