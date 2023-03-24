@@ -1,24 +1,19 @@
 {
-	"name": "ds_dest_adls_csv",
+	"name": "parquet_adls",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ADLS_Walter",
 			"type": "LinkedServiceReference"
 		},
-		"folder": {
-			"name": "GitHub-ADLS"
-		},
 		"annotations": [],
-		"type": "DelimitedText",
+		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileSystem": "bronze"
+				"folderPath": "temperatura",
+				"fileSystem": "gold"
 			},
-			"columnDelimiter": ",",
-			"escapeChar": "\\",
-			"firstRowAsHeader": true,
-			"quoteChar": "\""
+			"compressionCodec": "snappy"
 		},
 		"schema": []
 	}
