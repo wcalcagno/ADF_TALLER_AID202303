@@ -1,12 +1,12 @@
 {
-	"name": "ds_dest_adls_csv",
+	"name": "ds_origen_adls_csv",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ADLS_Walter",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "GitHub-ADLS"
+			"name": "Parquetizando"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
