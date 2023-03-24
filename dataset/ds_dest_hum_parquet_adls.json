@@ -19,7 +19,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@concat(\n    dataset().year,'humedad.snappy.parquet'\n)",
+					"value": "@concat(\n    dataset().year,'.humedad.snappy.parquet'\n)",
 					"type": "Expression"
 				},
 				"folderPath": "humedad",
