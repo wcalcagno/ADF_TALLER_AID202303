@@ -2,7 +2,7 @@
 	"name": "ds_csv_mciencia_dinamico",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "WSGH_MinCiencias",
+			"referenceName": "ADLS_Walter",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
@@ -14,11 +14,7 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation",
-				"relativeUrl": {
-					"value": "@concat(\n'Datos-CambioClimatico/main/output/temperatura_dmc/'\n,dataset().periodo\n,'/'\n,dataset().periodo\n,'_temperatura_dmc.csv'\n)",
-					"type": "Expression"
-				}
+				"type": "AzureBlobFSLocation"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",

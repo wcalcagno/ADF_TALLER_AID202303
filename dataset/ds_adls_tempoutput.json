@@ -2,7 +2,7 @@
 	"name": "ds_adls_tempoutput",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "adls_josewirtz",
+			"referenceName": "ADLS_Walter",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
