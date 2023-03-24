@@ -5,6 +5,11 @@
 			"referenceName": "ADLS_Walter",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"year": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "Parquetizando"
 		},
