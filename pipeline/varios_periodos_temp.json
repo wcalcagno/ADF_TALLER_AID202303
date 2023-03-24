@@ -145,7 +145,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_adls_tempoutput",
+									"referenceName": "ds_dest_adls_csv",
 									"type": "DatasetReference"
 								}
 							]
