@@ -22,8 +22,7 @@
 							"recursive": true,
 							"wildcardFolderPath": "Datos-CambioClimatico/main/output/viento_dmc/1950/",
 							"wildcardFileName": "1950_viento_dmc.txt",
-							"enablePartitionDiscovery": true,
-							"partitionRootPath": "Datos-CambioClimatico/main/output/humedad_dmc/"
+							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings"
@@ -159,8 +158,19 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": []
 			}
 		],
+		"variables": {
+			"year": {
+				"type": "String"
+			}
+		},
 		"folder": {
 			"name": "Parquetizando"
 		},
