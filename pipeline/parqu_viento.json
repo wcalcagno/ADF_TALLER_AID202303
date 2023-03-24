@@ -71,7 +71,7 @@
 										{
 											"source": {
 												"name": "time",
-												"type": "DateTime",
+												"type": "String",
 												"physicalType": "String"
 											},
 											"sink": {
@@ -83,7 +83,7 @@
 										{
 											"source": {
 												"name": "latitud",
-												"type": "Double",
+												"type": "String",
 												"physicalType": "String"
 											},
 											"sink": {
@@ -95,7 +95,7 @@
 										{
 											"source": {
 												"name": "longitud",
-												"type": "Double",
+												"type": "String",
 												"physicalType": "String"
 											},
 											"sink": {
@@ -107,7 +107,7 @@
 										{
 											"source": {
 												"name": "dd_Valor",
-												"type": "Double",
+												"type": "String",
 												"physicalType": "String"
 											},
 											"sink": {
@@ -119,7 +119,7 @@
 										{
 											"source": {
 												"name": "ff_Valor",
-												"type": "Double",
+												"type": "String",
 												"physicalType": "String"
 											},
 											"sink": {
@@ -131,7 +131,7 @@
 										{
 											"source": {
 												"name": "VRB_Valor",
-												"type": "Double",
+												"type": "String",
 												"physicalType": "String"
 											},
 											"sink": {
@@ -192,7 +192,13 @@
 							"outputs": [
 								{
 									"referenceName": "ds_dest_viento_parquet_adls",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"year": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
