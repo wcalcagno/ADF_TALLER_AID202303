@@ -5,6 +5,11 @@
 			"referenceName": "ADLS_Walter",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"year": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "Parquetizando"
 		},
@@ -13,7 +18,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "humedad.snappy.parquet",
+				"fileName": {
+					"value": "@concat(\n    dataset().year,'.humedad.snappy.parquet'\n)",
+					"type": "Expression"
+				},
 				"folderPath": "humedad",
 				"fileSystem": "gold"
 			},
