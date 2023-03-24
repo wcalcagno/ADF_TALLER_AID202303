@@ -1,0 +1,9 @@
+{
+	"name": "parquetizar",
+	"properties": {
+		"folder": {
+			"name": "Parquetizando"
+		},
+		"annotations": []
+	}
+}
