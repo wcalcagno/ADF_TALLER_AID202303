@@ -1,0 +1,25 @@
+{
+	"name": "ds_origen_adls_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS_Walter",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Parquetizando"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "bronze"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
