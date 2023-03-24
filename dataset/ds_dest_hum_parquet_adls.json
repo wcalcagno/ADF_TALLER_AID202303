@@ -13,7 +13,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "temperatura",
+				"folderPath": "humedad",
 				"fileSystem": "gold"
 			},
 			"compressionCodec": "snappy"
