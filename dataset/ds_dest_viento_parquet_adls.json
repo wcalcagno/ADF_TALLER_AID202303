@@ -5,6 +5,11 @@
 			"referenceName": "ADLS_Walter",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"year": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "Parquetizando"
 		},
@@ -13,7 +18,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "viento.snappy.parquet",
+				"fileName": {
+					"value": "@concat(\n    'viento.snappy.parquet'\n)",
+					"type": "Expression"
+				},
 				"folderPath": "viento",
 				"fileSystem": "gold"
 			},
