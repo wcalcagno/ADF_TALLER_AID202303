@@ -20,8 +20,8 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "Datos-CambioClimatico/main/output/humedad_dmc/1950",
-							"wildcardFileName": "1950_humedad_dmc.txt",
+							"wildcardFolderPath": "Datos-CambioClimatico/main/output/viento_dmc/1950/",
+							"wildcardFileName": "1950_viento_dmc.txt",
 							"enablePartitionDiscovery": true
 						},
 						"formatSettings": {
@@ -80,12 +80,36 @@
 							},
 							{
 								"source": {
-									"name": "HR_Valor",
+									"name": "dd_Valor",
 									"type": "Double",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "HR_Valor",
+									"name": "dd_Valor",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "ff_Valor",
+									"type": "Double",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ff_Valor",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "VRB_Valor",
+									"type": "Double",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "VRB_Valor",
 									"type": "String",
 									"physicalType": "UTF8"
 								}
@@ -130,7 +154,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_dest_hum_parquet_adls",
+						"referenceName": "ds_dest_viento_parquet_adls",
 						"type": "DatasetReference"
 					}
 				]
